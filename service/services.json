@@ -5,10 +5,11 @@
 "services": [{
 "name": "com.ddluk.testnode.service",
 "description": "helloworld example",
-"commands": [{
-    "name" : "hello",
-    "assistant" : "HelloCommandAssistant",
-    "public" : true
-    }]
+"commands": [
+	{"name": "startHTTPServer",
+	"assistant": "httpServerAssistant",
+	"public": true
+	}
+	]
  }]
 }

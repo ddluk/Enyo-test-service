@@ -10,19 +10,22 @@ enyo.kind({
          service: "palm://com.ddluk.testnode.service/",
          subscribe: true,
          timeout: 10000
-      }
+      },
    ],
    runserver: function() {
    	this.$.hello.call(
 	{"name": "World"},
-    {method:"hello", onSuccess:"successFunc",onFailure:"failureFunc"}
-)
+	{method:"startHTTPServer", onSuccess:"successFunc",onFailure:"failureFunc"})
+   	//this.$.hello.call(
+	//{"name": "World"},
+    //{method:"hello", onSuccess:"successFunc",onFailure:"failureFunc"}
+//)
    },
-   successFunc: function(successData) {
+   successFunc: function(inResponse, successData) {
    	console.log("dziala")
 	console.log("Success Data: " + enyo.json.stringify(successData.reply));
    },
-   failureFunc: function(failData) {
+   failureFunc: function(inResponse, failData) {
    	console.log("nie dziala");
 	console.log("Fail Data:" + enyo.json.stringify(failData));
    }
