@@ -1,0 +1,10 @@
+{
+	"id": "com.ddluk.testnode",
+	"version": "1.0.0",
+	"uiRevision": "2",
+	"vendor": "ddluk",
+	"type": "web",
+	"main": "index.html",
+	"title": "testnode",
+	"icon": "icon.png"
+}
