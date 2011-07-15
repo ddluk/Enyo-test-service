@@ -10,9 +10,10 @@ enyo.kind({
          service: "palm://com.ddluk.testnode.service/",
          subscribe: true,
          timeout: 10000
-      },
+      }
    ],
    runserver: function() {
+   		this.$.fireOpen.call();
    	this.$.hello.call(
 	{"name": "World"},
 	{method:"startHTTPServer", onSuccess:"successFunc",onFailure:"failureFunc"})
